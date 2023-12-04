@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Hpu2</title>
+
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon/favicon.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="music-player">
+        <!-- Khởi đầu  -->
+        <div id="music-dashboard">
+            <!-- Header Start-->
+            <header id="music-header">
+                <h6 class="song-name">Ngẫu Hứng</h6>
+            </header>
+            <!-- Header End-->
+            <!-- CD Start -->
+            <div id="cd">
+                <div class="cd-thumb"
+                    style="background-image: url('./assets/images/favicon/favicon.png')">
+                </div>
+            </div>
+            <!-- CD End -->
+
+            <!-- Control Start-->
+            <div id="music-control">
+                <div class="btn btn-repeat " title="Bật phát lại một bài">
+                    <i class="fa-solid fa-repeat icon"></i>
+                </div>
+                <div class="btn btn-prev" title="Bài hát trước">
+                    <i class="fa-solid fa-backward-step icon"></i>
+                </div>
+                <div class="btn btn-toggle-play" title="Phát / Tạm dừng">
+                    <i class="fa-solid fa-play icon-play icon"></i>
+                    <i class="fa-solid fa-pause icon-pause icon"></i>
+                    <div class="btn-play--effect"></div>
+                </div>
+                <div class="btn btn-next" title="Bài hát tiếp theo">
+                    <i class="fa-solid fa-forward-step icon"></i>
+                </div>
+                <div class="btn btn-random" title="Bật phát ngẫu nhiên">
+                    <i class="fa-solid fa-shuffle icon"></i>
+                </div>
+            </div>
+            <!-- Control End-->
+
+            <!-- Progress Start-->
+            <div id="music-progress">
+                <div class="progress-time">
+                    <div class="current-time">00:00</div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar">
+                            <div class="progress-bar--line">
+                                <div class="progress-bar--dot"></div>
+                            </div>
+                        </div>
+                        <input type="range" name="music-progress" min="0" max="50" value="0" step="0.1">
+                    </div>
+                    <div class="duration-time">00:00</div>
+                    <audio id="audio" src=""></audio>
+
+                </div>
+                <div class="progress-volume ">
+                    <i class="fa-solid fa-volume-high icon icon-unmute"></i>
+                    <i class="fa-solid fa-volume-xmark icon icon-mute"></i>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar">
+                            <div class="progress-bar--line progress-volume--width">
+                                <div class="progress-bar--dot"></div>
+                            </div>
+                        </div>
+                        <input type="range" name="music-volume" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>
+            <!-- Progress End-->
+        </div>
+        <!-- Dashboard End -->
+
+        <!-- Playlist Music -->
+        <div id="music-playlist">
+            
+           
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
