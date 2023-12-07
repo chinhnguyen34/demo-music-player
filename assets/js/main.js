@@ -137,6 +137,7 @@ class MusicPlayer {
 
         this.handleEvents();
 
+        this.audio.play();
     }
 
 
